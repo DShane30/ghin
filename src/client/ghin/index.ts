@@ -262,7 +262,11 @@ class GhinClient {
       for (const [key, value] of Object.entries(searchDefaults)) {
         searchParams.set(key, value.toString())
       }
-
+      
+      for (const [key, value] of Object.entries(params)) {
+        searchParams.set(key, value.toString())
+      }
+      
       if (ghin) {
         searchParams.set(searchParameters.GOLFER_ID, ghin.toString())
       }
