@@ -49,6 +49,7 @@ const schemaScoreStatusWithTransform = schemaRawScoreStatus.transform(
 
 const schemaScore = z.object({
   adjusted_gross_score: number,
+  adjusted_scaled_up_differential: float.nullable().optional(),
   adjustments: z.array(schemaScoringAdjustment),
   back9_adjusted: number.nullable(),
   back9_course_rating: float.nullable(),
