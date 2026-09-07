@@ -17,6 +17,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && tsup src/index.ts --format cjs,esm --dts",
+    "prepare": "npm run build"
     "changeset": "npx changeset",
     "dev": "pnpm --package=tsx --package=dotenv -s dlx tsx -r dotenv/config playground.ts",
     "format": "biome check --write ./src",
